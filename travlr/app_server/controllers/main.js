@@ -1,3 +1,7 @@
 /* GET HOME PAGE*/
-router.get('/', function(req,res){res.render('index', {title: 'Express'});
-});
+const index = (req, res) =>{
+    res.render('index', {title: "Travlr Getaways"})};
+
+module.exports = {
+    index
+}
