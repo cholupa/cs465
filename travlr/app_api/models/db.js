@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
-const host = process.env.DB_HOST || '127.0.0.1:27017';
+const host = process.env.DB_HOST || '127.0.0.1';
 const dbURI = `mongodb://${host}/travlr`;
 const readLine = require('readline');
 
 // build connection string + set timeout for connection
-const connect = ()=>{
-    setTimeout(()=>mongoose.connect(dbURI),1000);
-    //console.log("Made it past the connection");
+const connect = () => {
+    setTimeout(() => mongoose.connect(dbURI,{
+    }), 1000);
 }
 
 mongoose.connection.on('connected',()=> {
