@@ -37,7 +37,6 @@ export class TripListingComponent implements OnInit{
       next: (value:any) => {
         this.trips = value;
         this.cd.detectChanges();
-        console.log('latest' + JSON.stringify(value));
         if(value.length > 0){
           this.message = 'There are ' + value.length + 'trips from the database';
         }
