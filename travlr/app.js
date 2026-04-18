@@ -44,13 +44,13 @@ app.use('/api', (req,res,next) =>{
   next();
 });
 
-app.use('/api', (req, res, next) => {
-  console.log("=== RAW API HIT ===");
-  console.log("Method:", req.method);
-  console.log("URL:", req.url);
-  console.log("Headers:", req.headers);
-  next();
-});
+// app.use('/api', (req, res, next) => {
+//   console.log("=== RAW API HIT ===");
+//   console.log("Method:", req.method);
+//   console.log("URL:", req.url);
+//   console.log("Headers:", req.headers);
+//   next();
+// });
 
 //router wiring
 app.use('/', indexRouter);
